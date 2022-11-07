@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A4E5E0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Enter Reminder details"
+        android:textColor="#084220"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/titleT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Enter Title"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/descT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Enter Description"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/titleT"
+        app:layout_constraintTop_toBottomOf="@+id/titleT" />
+
+    <TextView
+        android:id="@+id/dateT"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="dd-mm-yyy"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/descT"
+        app:layout_constraintTop_toBottomOf="@+id/descT" />
+
+    <TextView
+        android:id="@+id/timeT"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:text="hh:mm"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/dateT"
+        app:layout_constraintTop_toBottomOf="@+id/dateT" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:onClick="remClick"
+        android:text="Add"
+        app:layout_constraintStart_toStartOf="@+id/timeT"
+        app:layout_constraintTop_toBottomOf="@+id/timeT" />
+
+    <Button
+        android:id="@+id/cancelRemB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:onClick="remClick"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addButton"
+        app:layout_constraintTop_toTopOf="@+id/addButton" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:onClick="selectDate"
+        android:text="Set Date"
+        app:layout_constraintStart_toEndOf="@+id/dateT"
+        app:layout_constraintTop_toTopOf="@+id/dateT" />
+
+    <Button
+        android:id="@+id/selectTimeB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="selectTime"
+        android:text="Set Time"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/timeT" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
